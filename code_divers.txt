@@ -1,0 +1,11 @@
+#Exo : Comptage d'espèces
+from collections import defaultdict
+counter = defaultdict(int)
+i=0
+for lecture in donnees:
+    nb_organismes = 0
+    for organisme in base:
+        if base[organisme].find(lecture) > 0:
+            nb_organismes += 1
+            counter[organisme] += 1
+print(counter)
